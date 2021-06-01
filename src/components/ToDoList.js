@@ -2,11 +2,11 @@ import React from "react";
 // Import components
 import Todo from "./Todo";
 
-const ToDoList = ({ todos, setTodos }) => {
+const ToDoList = ({ todos, setTodos, filteredTodos }) => {
     return (
         <div className="todo-container">
             <ul className="todo-list">
-                {todos.map((todo) => (
+                {filteredTodos.map((todo) => (
                     <Todo
                         setTodos={setTodos}
                         todos={todos}
@@ -18,7 +18,6 @@ const ToDoList = ({ todos, setTodos }) => {
             </ul>
         </div>
     );
-
 };
 
 export default ToDoList;
